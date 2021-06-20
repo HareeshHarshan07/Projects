@@ -3,12 +3,12 @@ using SequenceAnalysis;
 
 namespace Runner.SolutionFactory
 {
-    class SequenceAnalysis : IOperation
+    public class SequenceAnalysis : IOperation
     {
         public void Process()
         {
-            var sequenceAnalysis = new StingSequenceAnalysis();
-            sequenceAnalysis.GetSortedUpperCaseString();
+            var sequenceAnalysis = new StringSequenceAnalysis();
+            sequenceAnalysis.ProcessStringSequence();
         }
     }
 }

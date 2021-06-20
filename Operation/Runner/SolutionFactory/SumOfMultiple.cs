@@ -1,10 +1,9 @@
 ﻿using Runner.SolutionFactory.Interfaces;
 using SumOfMultiple;
-using System;
 
 namespace Runner.SolutionFactory
 {
-    class SumOfMultiple : IOperation
+    public class SumOfMultiple : IOperation
     {
         public void Process()
         {

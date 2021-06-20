@@ -1,24 +1,26 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
 using Runner.SolutionFactory.Enum;
 using Runner.SolutionFactory.Interfaces;
-using System;
-using System.Collections.Generic;
 
 namespace Runner.SolutionFactory
 {
-    public class SolutionFactory : IOperationFactory
+    public static class SolutionFactory 
     {
-        private Dictionary<OperationType, Func<IOperation>> m_SolutionTypeMapper;
+        private static readonly Dictionary<OperationType, Func<IOperation>> SolutionTypeMapper;
 
-        public SolutionFactory()
+        static SolutionFactory()
         {
-            m_SolutionTypeMapper = new Dictionary<OperationType, Func<IOperation>>();
-            m_SolutionTypeMapper.Add(OperationType.SumOfMultiple, () => { return new SumOfMultiple(); });
-            m_SolutionTypeMapper.Add(OperationType.SequenceAnalysis, () => { return new SequenceAnalysis(); });
+            SolutionTypeMapper = new Dictionary<OperationType, Func<IOperation>>
+            {
+                {OperationType.SumOfMultiple, () => new SumOfMultiple()},
+                {OperationType.SequenceAnalysis, () => new SequenceAnalysis()}
+            };
         }
-        public IOperation GetOperation(OperationType operationType)
+
+        public static IOperation GetOperation(OperationType operationType)
         {
-            return m_SolutionTypeMapper[operationType]();
+            return SolutionTypeMapper[operationType]();
         }
     }
 }

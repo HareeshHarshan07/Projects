@@ -1,46 +1,41 @@
-﻿using Runner.SolutionFactory;
+﻿using System;
 using Runner.SolutionFactory.Enum;
-using Runner.SolutionFactory.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Runner
 {
-    class Program
+    internal class Program
     {
-        private static IOperationFactory m_SolutionFactory = null;
-        private static OperationType m_OperationType;
-        static void Main(string[] args)
+        private static OperationType _operationType;
+
+        private static void Main(string[] args)
         {
-            GetOperationInfomation();
-            m_SolutionFactory = new SolutionFactory.SolutionFactory();
-            var operation = m_SolutionFactory.GetOperation(m_OperationType);
+            GetOperationInformation();
+            var operation = SolutionFactory.SolutionFactory.GetOperation(_operationType);
             operation.Process();
             Console.ReadLine();
         }
-        static void GetOperationInfomation()
+
+        private static void GetOperationInformation()
         {
             DisplayItems();
             GetInputFromUser();
         }
-        static void GetInputFromUser()
+
+        private static void GetInputFromUser()
         {
             Console.Write("\r\nSelect an option: ");
-            int selectedOption;
-            Int32.TryParse(Console.ReadLine(), out selectedOption);
+            int.TryParse(Console.ReadLine(), out var selectedOption);
 
-            m_OperationType = (OperationType) selectedOption;
-            if (!Enum.IsDefined(typeof(OperationType), m_OperationType) && !m_OperationType.ToString().Contains(","))
+            _operationType = (OperationType) selectedOption;
+            if (!Enum.IsDefined(typeof(OperationType), _operationType) && !_operationType.ToString().Contains(","))
             {
-                Console.WriteLine($"Selected option is not valid. Press enter to retry...");
+                Console.WriteLine("Selected option is not valid. Press enter to retry...");
                 Console.ReadLine();
-                GetOperationInfomation();
+                GetOperationInformation();
             }
         }
-        static void  DisplayItems()
+
+        private static void DisplayItems()
         {
             Console.Clear();
             Console.WriteLine("<<<<<<<<<<<<<<<<   Operations  >>>>>>>>>>>>>>>>>");
@@ -48,6 +43,5 @@ namespace Runner
             Console.WriteLine("1) SumOfMutiple");
             Console.WriteLine("2) SequenceAnalysis");
         }
-
     }
 }

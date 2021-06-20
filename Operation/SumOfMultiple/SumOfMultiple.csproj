@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArithmaticOperationExtensions.cs" />
+    <Compile Include="ArithmeticOperationExtensions.cs" />
     <Compile Include="SumOfNaturalNumbers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SumOfMultiple;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SumOfMultipleTests
 {
@@ -12,8 +7,8 @@ namespace SumOfMultipleTests
     public class ArithmaticOperationExtensionsTests
     {
         [TestMethod]
-        [DataRow(6,8)]
-        [DataRow(5,3)]
+        [DataRow(6, 8)]
+        [DataRow(5, 3)]
         [DataRow(10, 23)]
         [DataRow(16, 60)]
         [DataRow(20, 78)]
@@ -28,6 +23,5 @@ namespace SumOfMultipleTests
             //Assert
             Assert.AreEqual(actulResult, expectedResult);
         }
-
     }
 }

@@ -47,7 +47,6 @@
     <Compile Include="SolutionFactory\SequenceAnalysis.cs" />
     <Compile Include="SolutionFactory\SolutionFactory.cs" />
     <Compile Include="SolutionFactory\SumOfMultiple.cs" />
-    <Compile Include="SolutionFactory\Interfaces\IOperationFactory.cs" />
     <Compile Include="SolutionFactory\Interfaces\IOperation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

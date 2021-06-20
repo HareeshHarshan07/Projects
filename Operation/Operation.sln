@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Runner", "Runner", "{525F2041-4988-4B66-A24F-E26CC115D979}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{C0A16CA0-6B75-43EA-8291-F39D8F375EAF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runner", "Runner\Runner.csproj", "{8BA21727-C053-43F2-A2DE-3C28D889BC21}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SumOfMultiple", "SumOfMultiple", "{FF97F5DD-8A8F-48B4-ADF2-8D0E72B93BBC}"

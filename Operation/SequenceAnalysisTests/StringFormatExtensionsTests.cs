@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SequenceAnalysis;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SequenceAnalysisTests
 {
@@ -40,7 +35,7 @@ namespace SequenceAnalysisTests
             var input = inputString;
 
             //Act
-            var actulResult = input.RemoveNumbersANdSpecialCharacters();
+            var actulResult = input.RemoveNumbersAndSpecialCharacters();
 
             //Assert
             Assert.AreEqual(actulResult, expectedResult);

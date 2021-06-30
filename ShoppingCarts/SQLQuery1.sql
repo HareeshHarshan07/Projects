@@ -1,12 +1,3 @@
--- =============================================  
--- Author : Shanu  
--- Create date : 2017-02-03
--- Description : To Create Database,Table and Sample Insert Query  
--- Latest  
--- Modifier : Shanu  
--- Modify date : 2017-02-03  
--- ============================================= 
---Script to create DB,Table and sample Insert data 
 USE MASTER 
 GO 
 -- 1) Check for the Database Exists .If the database is exist then drop and create new DB 
